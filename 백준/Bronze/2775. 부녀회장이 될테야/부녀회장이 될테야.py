@@ -12,3 +12,4 @@ for tc in range(T):
         for _ in range(1, k+2):
             temp *= ((_-1)+n)/_
         print(round(temp))
+        
