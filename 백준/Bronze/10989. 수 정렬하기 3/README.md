@@ -27,4 +27,4 @@
  1. input 보다는 sys.stdin.readline 이 더 가벼움.
  2. for문 속에서 append를 사용하게 되면 메모리 재할당이 이루어져서 메모리를 효율적으로 사용하지 못함.
     => `[0] * 100001` 에 직접 할당.  # comprehension 방식
-    참고링크: https://wikidocs.net/21057
+    참고링크: https://wikidocs.net/21057 
