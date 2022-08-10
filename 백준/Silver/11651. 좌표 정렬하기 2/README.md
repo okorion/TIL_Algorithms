@@ -22,3 +22,12 @@
 
  <p>첫째 줄부터 N개의 줄에 점을 정렬한 결과를 출력한다.</p>
 
+### 문제풀이 실패 지점
+
+=> 파이썬 lambda 사용법 미숙(처음 써 봄.) => 두 개 이상의 인자를 정렬할 때는 lambda식 콜론 뒤에 괄호로 묶어주기.
+</br>
+</br>
+![images_aonee_post_4ede4090-9f6a-45cd-a052-43f1a8127967_image](https://user-images.githubusercontent.com/97646070/183906662-ea28f9e0-7216-41a3-a101-095487a59db9.png)
+</br>
+</br>
+참고링크: [[Python] 정렬 문법 sort() sorted() reverse](https://velog.io/@aonee/Python-%EC%A0%95%EB%A0%AC-sort-sorted-reverse)
