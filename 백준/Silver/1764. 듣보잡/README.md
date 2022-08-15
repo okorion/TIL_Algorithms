@@ -24,3 +24,19 @@
 
  <p>듣보잡의 수와 그 명단을 사전순으로 출력한다.</p>
 
+### 문제풀이 실패 지점
+
+![20220816033554](https://user-images.githubusercontent.com/97646070/184695103-3064de43-031f-44e6-8e13-23f9b458c321.png)
+
+=> a와 b를 리스트와 for문을 이용하여 중복을 찾았는데 계속 시간초과
+<br><br>
+![20220816033608](https://user-images.githubusercontent.com/97646070/184695113-45252ee3-8b89-4a85-b135-6ba9f207fdb3.png)
+
+=> 자료형 set을 활용하여 교집합을 구하여 통과
+<br>
+=> 자료형 set은 인덱싱이 불가한 대신, 합집합/교집합/차집합 연산이 효과적
+
+**참고링크**
+<br>
+* [집합 자료형](https://wikidocs.net/1015)
+* [[Python] set 자료형 - 교집합, 합집합, 차집합](https://pydole.tistory.com/80)
