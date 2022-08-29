@@ -5,6 +5,9 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 하단에 사용된 코드들 자유롭게 이용하여 알고리즘 스타일 Markdown 파일로 정리하기.
 * 이진탐색
 * 백트래킹
+* DFS
+* BFS
+* DP
 
 <details><summary>목차</summary>
 
