@@ -1,43 +1,36 @@
-# TIL-Algorithms-BAEKJOON
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+## TIL Algorithms
 
-
-하단에 사용된 코드들 자유롭게 이용하여 알고리즘 스타일 Markdown 파일로 정리하기.
 * 이진탐색
 * 백트래킹
 * DFS
 * BFS
 * DP
 
-<details><summary>목차</summary>
+<details><summary>누적합</summary>
 
-1. [개발을 하고 싶어요](#개발을-하고-싶어요)
-2. [코딩을 잘하고 싶어요](#coding을-잘하고-싶어요)
+>  `list[i:j]`와 같은 슬라이싱보다 `sum[j] - sum[i-1]` 방식을 사용하는 것이 성능에 유리. (전자는 시간복잡도 O(N\*2) 후자는 2\*O(N)
 
-</detail>
+</details>
+<details><summary>알고리즘 팁</summary>
 
-</br>
+#### input과 sys.stdin.readline의 차이점
 
----
+=> `input()` 내장 함수는 prompt message를 출력하고 개행 문자를 삭제한 값을 리턴.
 
----
+=> `sys.stdin.readline()` sys 함수는 prompt message를 출력하지 않고 개행 문자를 그대로 리턴.
 
-| 값 | 의미 | 기본값 |
-|---|:---:|---:|
-| `static` | 유형(기준) 없음 / 배치 불가능 | `static` |
-| `relative` | 요소 자신을 기준으로 배치 |  |
-| `absolute` | 위치 상 부모(조상)요소를 기준으로 배치 |  |
-| `fixed` | 브라우저 창을 기준으로 배치 |  |
-| [코딩을 잘하고 싶어요](#coding을-잘하고-싶어요) | [코딩을 잘하고 싶어요](#coding을-잘하고-싶어요) | [코딩을 잘하고 싶어요](#coding을-잘하고-싶어요)
----
 
-## 개발을 하고 싶어요
+#### Prompt Message란?
 
-</br>
-</br></br></br></br></br></br></br></br>
-</br></br></br></br></br></br></br></br></br></br></br>
+>  *Prompt*는 컴퓨터가 입력을 기다리고 있음을 가리키기 위해 화면에 나타나는 표시이다. 예를 들어 "직원 이름을 입력하시오"와 같은 메시지도 프롬프트가 될수 있으며, 명령어 중심의 시스템에서는 명령어를 받아들이기 위한 준비가 되었을 때, 미리 정해진 부호를 나타낸다.
+>
+>  이를테면, dBASE 에서는 점(.)을, [유닉스](http://www.terms.co.kr/UNIX.htm)에서는 $ 또는 %를, [DOS](http://www.terms.co.kr/DOS.htm)에서는 C:\> 등을 표시하는데, 이는 각 시스템별로 특색 있는 프롬프트의 예이다.
 
-## Coding을 잘하고 싶어요
+```
+>>> number = input("숫자를 입력하세요: ")  #input 안의 변수가 prompt message
+숫자를 입력하세요: 7
+>>> print(number)
+7
+```
 
-</br></br></br></br></br></br></br></br></br></br>
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</details>
