@@ -34,3 +34,30 @@
 
  <p>첫째 줄에는 잘라진 햐얀색 색종이의 개수를 출력하고, 둘째 줄에는 파란색 색종이의 개수를 출력한다.</p>
 
+### 문제풀이 실패 지점 (30분 풀고 구글링)
+
+=> 어떤 함수들을 사용해서 행렬들을 반씩 나누어나갈 지 고민했고, def에 들어갈 파라미터 또한 고민
+
+=> 따로 return을 통해 반환하지 않고 전역변수 설정을 통해 조건에 맞는 행렬 수를 카운트.
+
+=> for문과 if문의 구조를 통해 원하는 조건의 행렬 수 카운트.
+
+```
+def rec(x, y, n):
+    global cnt_white, cnt_blue
+    color = matrix[x][y]
+    for i in range(x, x+n):                               #for문
+        for j in range(y, y+n):
+            if color != matrix[i][j]:
+                rec(x, y, n // 2)
+                rec(x + n // 2, y, n // 2)
+                rec(x, y + n // 2, n // 2)
+                rec(x + n // 2, y + n // 2, n // 2)
+                return                        #따로 return 값이 존재하지 않음.
+
+    if color == 1:                                        #if문
+        cnt_blue += 1
+
+    elif color == 0:
+        cnt_white += 1 
+```
