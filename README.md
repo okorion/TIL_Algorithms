@@ -17,8 +17,10 @@
 
 => `input()` 내장 함수는 prompt message를 출력하고 개행 문자를 삭제한 값을 리턴.
 
-=> `sys.stdin.readline()` sys 함수는 prompt message를 출력하지 않고 개행 문자를 그대로 리턴.
+=> `sys.stdin.readline()` sys 함수는 prompt message를 출력하지 않고 개행 문자를 그대로 리턴. 
 
+=> #개행 문자 리턴으로 인해 백준 종종 실패하는 경우가 있기 때문에 `.strip()` 붙여주기 
+ 
 
 #### Prompt Message란?
 
