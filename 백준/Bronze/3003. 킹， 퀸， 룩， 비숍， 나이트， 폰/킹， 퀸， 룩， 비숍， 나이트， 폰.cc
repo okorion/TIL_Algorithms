@@ -1,33 +1,43 @@
-#include <iostream>
- 
-using namespace std;
- 
-int main(int argc, char const *argv[]) {
- 
-	int king = 1;
-	int queen = 1;
-	int rook = 2;
-	int bishop = 2;
-	int knight = 2;
-	int pawn = 8;
- 
-	// 입력받을 변수
-	int in_king, in_queen, in_rook, in_bishop, in_knight, in_pawn;
- 
-	cin >> in_king;
-	cin >> in_queen;
-	cin >> in_rook;
-	cin >> in_bishop;
-	cin >> in_knight;
-	cin >> in_pawn;
- 
-	// 참고로 출력형식을 보면 각 변수들사이에 공백으로 구분 된한 줄로 출력해야한다.
-	cout << king - in_king << " ";
-	cout << queen - in_queen << " ";
-	cout << rook - in_rook << " ";
-	cout << bishop - in_bishop << " ";
-	cout << knight - in_knight << " ";
-	cout << pawn - in_pawn << " ";
- 
-	return 0;
+#include <stdio.h>
+
+int main(void) {
+    int k, q, r, b, n, p;
+    
+    scanf("%d %d %d %d %d %d", &k, &q, &r, &b, &n, &p);
+    
+    if (k != 1) {
+        printf("%d ", 1-k);
+    } else {
+        printf("%d ", 0);
+    }
+    
+    if (q != 1) {
+        printf("%d ", 1-q);
+    } else {
+        printf("%d ", 0);
+    }
+    
+    if (r != 2) {
+        printf("%d ", 2-r);
+    } else {
+        printf("%d ", 0);
+    } 
+    
+    if (b != 2) {
+        printf("%d ", 2-b);
+    } else {
+        printf("%d ", 0);
+    }
+    
+    if (n != 2) {
+        printf("%d ", 2-n);
+    } else {
+        printf("%d ", 0);
+    }
+    
+    if (p != 8) {
+        printf("%d ", 8-p);
+    } else {
+        printf("%d ", 0);
+    }
 }
