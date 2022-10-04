@@ -32,3 +32,8 @@
 
  <p>첫 번째 줄에 진수가 여름 동안 스타후르츠를 팔아 벌 수 있는 수익을 출력합니다.</p>
 
+### 문제풀이 실패 지점
+
+=> Java에서 몫을 구할 때는 `//`->`/` (기호 하나)
+
+=> SWEA에서는 `public class Solution {~`로 설정하고 Baekjoon에서는 `public class Main {~`로 설정하기
