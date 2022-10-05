@@ -1,3 +1,5 @@
+# Python
+
 ## TIL Algorithms
 
 </details>
@@ -37,3 +39,44 @@
 * 구간합
 >  `list[i:j]`와 같은 슬라이싱보다 `sum[j] - sum[i-1]` 누적합을 연산하는 방식을 사용하는 것이 성능에 유리. (전자는 시간복잡도 O(N\*2) 후자는 2\*O(N)
 
+<br>
+
+# C / C++
+
+## 알고리즘 문제 풀이
+
+```
+#include <stdio.h>        #include <iostream>은 C++
+
+int main(void) {
+    int a;
+    
+    scanf("%d", &a);
+    
+    printf("%d", a);
+}
+```
+
+=> `123` 입력 시 `123` 출력
+
+<br>
+
+# JAVA
+
+## 알고리즘 문제 풀이
+
+```
+import java.util.*;                  #java.util.Scanner;
+
+public class Main {                  #SWEA에서는 public class Solution
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        
+        System.out.print(a);
+    }
+}
+```
+
+=> `123` 입력 시 `123` 출력
