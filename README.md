@@ -68,7 +68,7 @@ int main(void) {
 ```
 import java.util.*;                  #java.util.Scanner;
 
-public class Main {                  #SWEA에서는 public class Solution
+public class Main {                  #SWEA에서는 `public class Solution`
     public static void main(String args[]) {            #(String[] args)도 가능!
         Scanner sc = new Scanner(System.in);
         
