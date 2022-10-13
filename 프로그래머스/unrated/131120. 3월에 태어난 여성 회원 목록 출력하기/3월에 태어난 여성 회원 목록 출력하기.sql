@@ -1,0 +1,6 @@
+SELECT MEMBER_ID, MEMBER_NAME, GENDER, date_format(date_of_birth, '%Y-%m-%d') as date_of_birth
+FROM MEMBER_PROFILE 
+WHERE DATE_OF_BIRTH LIKE '%-03-%'
+    AND TLNO IS NOT NULL 
+    AND GENDER = 'W' 
+ORDER BY MEMBER_ID ASC
