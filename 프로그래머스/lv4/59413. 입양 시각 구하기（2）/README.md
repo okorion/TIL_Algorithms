@@ -166,3 +166,9 @@ Empty
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+
+## 문제풀이 실패 지점
+
+=> 쿼리문에서 로컬 변수를 활용해야 함. `SET @HOUR := -1;` -> `:=`는 대입연산, `;`는 필수
+
+=> `SELECT (@HOUR := @HOUR + 1) AS HOUR` -> `+1` 이 붙어야 `+=` 연산과 비슷한 방식으로 작동.
