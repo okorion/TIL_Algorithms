@@ -26,7 +26,7 @@
 >>> print(number)
 7
 ```
-
+ 
 </details>
 
 * 이진탐색
