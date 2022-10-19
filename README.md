@@ -2,7 +2,7 @@
 
 ## TIL Algorithms
 
-</details>
+</details> 
 <details><summary>알고리즘 팁</summary>
 
 #### input과 sys.stdin.readline의 차이점
