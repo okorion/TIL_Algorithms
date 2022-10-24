@@ -79,4 +79,14 @@ public class Main {                  #SWEA에서는 `public class Solution`
 }
 ```
 => `123` 입력 시 `123` 출력
-<br><br>
+
+<br>
+
+# JavaScript
+
+## 알고리즘 문제 풀이
+
+```
+const input = require('fs').readFileSync(0, 'utf-8').toString().split(' ');
+
+```
