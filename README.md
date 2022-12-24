@@ -1,9 +1,27 @@
-# Python
+# TIL_Algorithms
 
-## TIL Algorithms
+## ⚙ Study RULE!
+- Python으로!
+- 백준!
+- 그리디, 탐색(완전탐색/BFS/DFS), 기초 동적 프로그래밍 50문제씩!
+- 이후 그래프 이론, 중급/고급 동적 프로그래밍, 문자열 순서로!
+- 문제 당 30분 제한 => 많이 접하기
 
+<br>
 </details> 
-<details><summary>알고리즘 팁</summary>
+<details><summary>Python</summary>
+
+#### 🛠 txt파일 불러오기 (알고리즘 문제풀이)
+
+```
+import sys
+
+sys.stdin = open("input.txt", 'r')
+
+input = sys.stdin.readline
+
+N = int(input())
+```
 
 #### input과 sys.stdin.readline의 차이점
 
@@ -27,23 +45,20 @@
 7
 ```
 
-</details>
+### 주제별 TIP!
 
-* 이진탐색
-* 백트래킹
-* DFS
-* BFS
 * DP
 > 14501 퇴사: 뒤에서부터 가능한 비용을 누적하여 max값 비교.
 
 * 구간합
 >  `list[i:j]`와 같은 슬라이싱보다 `sum[j] - sum[i-1]` 누적합을 연산하는 방식을 사용하는 것이 성능에 유리. (전자는 시간복잡도 O(N\*2) 후자는 2\*O(N)
 
-<br>
+</details>
 
-# C / C++
+</details> 
+<details><summary>C / C++</summary>
 
-## 알고리즘 문제 풀이
+### 알고리즘 문제 풀이
 
 ```
 #include <stdio.h>        #include <iostream>은 C++
@@ -58,12 +73,11 @@ int main(void) {
 ```
 
 => `123` 입력 시 `123` 출력
+</details> 
+</details> 
+<details><summary>JAVA</summary>
 
-<br>
-
-# JAVA
-
-## 알고리즘 문제 풀이
+### 알고리즘 문제 풀이
 
 ```
 import java.util.*;                  #java.util.Scanner;
@@ -81,31 +95,16 @@ public class Main {                  #SWEA에서는 `public class Solution`
 => `123` 입력 시 `123` 출력
 
 <br>
+</details>
 
-# JavaScript
+</details> 
+<details><summary>JavaScript</summary>
 
-## 알고리즘 문제 풀이
+### 알고리즘 문제 풀이
 
 ```
 const input = require('fs').readFileSync(0, 'utf-8').toString().split(' ');
 
 ```
-
-
-
-
-
---------
-
-#### 🛠 txt파일 불러오기 (알고리즘 문제풀이)
-
-```
-import sys
-
-sys.stdin = open("input.txt", 'r')
-
-input = sys.stdin.readline
-
-N = int(input())
-```
+</details>
 
