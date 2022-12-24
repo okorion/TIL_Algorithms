@@ -1,4 +1,4 @@
-# [Silver IV] 보물 - 1026 
+# [Silver IV] 보물 - 1026, 15분 소요
 
 [문제 링크](https://www.acmicpc.net/problem/1026) 
 
@@ -29,4 +29,3 @@
 ### 출력 
 
  <p>첫째 줄에 S의 최솟값을 출력한다.</p>
-
