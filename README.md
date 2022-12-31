@@ -47,6 +47,9 @@ N = int(input())
 
 ### 주제별 TIP!
 
+* Deque
+> graph를 위해 `[[0]] * (N+1)`로 만드니 인덱스에 리스트 쌓기 불가능 => `[list() for i in range(N+1)]` 을 통해 graph 틀 만들기
+
 * DP
 > 14501 퇴사: 뒤에서부터 가능한 비용을 누적하여 max값 비교.
 
