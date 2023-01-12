@@ -56,6 +56,11 @@ N = int(input())
 * 구간합
 >  `list[i:j]`와 같은 슬라이싱보다 `sum[j] - sum[i-1]` 누적합을 연산하는 방식을 사용하는 것이 성능에 유리. (전자는 시간복잡도 O(N\*2) 후자는 2\*O(N)
 
+* 힙
+```
+    for num in nums:
+      heappush(heap, (-num, num))  # (우선 순위, 값)
+```    
 </details>
 
 </details> 
