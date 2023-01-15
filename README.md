@@ -61,6 +61,10 @@ N = int(input())
     for num in nums:
       heappush(heap, (-num, num))  # (우선 순위, 값)
 ```    
+
+* PriorityQueue (우선순위 큐)
+> 알고리즘 문제 풀이에서는 속도가 느리므로 heapq로 구현하기
+
 </details>
 
 </details> 
