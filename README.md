@@ -52,6 +52,24 @@ N = int(input())
 
 * DP
 > 14501 퇴사: 뒤에서부터 가능한 비용을 누적하여 max값 비교.
+* Memoization 기본 코드 형태
+```
+def fibo(x):
+  # fibo(1)=fibo(2)=0
+  if x==1 or x==2:
+    return 1
+
+  # 이미 계산한 적있는 문제라면 그대로 반환
+  if memo[x] != 0:
+    return memo[x]
+
+  # 아직 계산하지 않은 문제라면 점화식에 따라서 피보나치 결과 반환
+  memo[x] = fibo(x-1)+fibo(x-2)
+  return memo[x]
+
+
+print(fibo(99))
+```
 
 * 구간합
 >  `list[i:j]`와 같은 슬라이싱보다 `sum[j] - sum[i-1]` 누적합을 연산하는 방식을 사용하는 것이 성능에 유리. (전자는 시간복잡도 O(N\*2) 후자는 2\*O(N)
