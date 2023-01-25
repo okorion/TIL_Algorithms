@@ -22,3 +22,6 @@
 
  <p>첫째 줄에 경우의 수를 출력한다.</p>
 
+### 참고링크
+
+https://lemonjade.tistory.com/2
