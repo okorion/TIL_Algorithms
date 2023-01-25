@@ -24,3 +24,6 @@
 
  <p>첫째 줄에 경우의 수를 출력한다. 경우의 수는 2<sup>31</sup>보다 작다.</p>
 
+### 참고링크
+
+https://lbdiaryl.tistory.com/252
