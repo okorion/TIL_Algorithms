@@ -1,25 +1,27 @@
 import sys
-
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
-visited = [False] * (N+1)
-result_list = []
+
 temp_list = []
 
 
-def backtracking(k, n, m):
-    if k == m and sorted(result_list) not in temp_list:
-        temp_list.append(sorted(result_list))
-        return print(" ".join(map(str, result_list)))   # print(*result_list)
+def dfs():
+    if len(temp_list) == M:
+        print(" ".join(map(str, temp_list)))
+        return
 
-    for i in range(1, n+1):
-        if not visited[i]:
-            result_list.append(i)
-            visited[i] = True
-            backtracking(k+1, n, m)
-            result_list.pop()
-            visited[i] = False
+    for _ in range(1, N+1):
+        if _ not in temp_list:
+            if len(temp_list) == 0:
+                temp_list.append(_)
+                dfs()
+                temp_list.pop()
+            else:
+                if _ > temp_list[-1]:
+                    temp_list.append(_)
+                    dfs()
+                    temp_list.pop()
 
 
-backtracking(0, N, M)
+dfs()
