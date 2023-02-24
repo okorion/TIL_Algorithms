@@ -1,60 +1,63 @@
 import copy
 import sys
+from collections import deque
 
 input = sys.stdin.readline
 
-N, M = map(int, input().strip().split())
-matrix = []
-virus_list = []
-max_value = 0
+N, M = map(int, input().split())
+lab_matrix = [list(map(int, input().split())) for _ in range(N)]
+max_result = 0
 
-for _ in range(N):
-    matrix.append(list(map(int, input().strip().split())))
-
-for _ in range(N*M):
-    i = _ // M
-    j = _ % M
-    if matrix[i][j] == 2:
-        virus_list.append([i, j])
+# print(lab_matrix)
 
 
-# 벽 만들기
-def build_wall(start, count):
-    global max_value
-    if count == 3:
-        temp_matrix = copy.deepcopy(matrix)
-        for _ in range(len(virus_list)):
-            p, q = virus_list[_]
-            spread_virus(p, q, temp_matrix)
-        result = sum(k.count(0) for k in temp_matrix)
-        max_value = max(max_value, result)
+def bfs():
+    global max_result
 
-        return True
-    else:
-        for _ in range(start, N*M):
-            a = _ // M
-            b = _ % M
-            if matrix[a][b] == 0:
-                matrix[a][b] = 1
-                build_wall(start, count+1)
-                matrix[a][b] = 0
+    virus = deque()
+    temp_lab_matrix = copy.deepcopy(lab_matrix)
+    dx = [1, 0, -1, 0]
+    dy = [0, -1, 0, 1]
+    result = 0
 
+    for i in range(N):
+        for j in range(M):
+            if lab_matrix[i][j] == 2:
+                virus.append([i, j])
 
-# 바이러스 확산
-dx = [1, 0, -1, 0]
-dy = [0, 1, 0, -1]
+    while virus:
+        x, y = virus.pop()
 
-
-def spread_virus(x, y, temp_matrix):
-    if temp_matrix[x][y] == 2:
         for _ in range(4):
-            nx = x + dx[_]
-            ny = y + dy[_]
+            nx = dx[_] + x
+            ny = dy[_] + y
+
             if 0 <= nx < N and 0 <= ny < M:
-                if temp_matrix[nx][ny] == 0:
-                    temp_matrix[nx][ny] = 2
-                    spread_virus(nx, ny, temp_matrix)
+                if temp_lab_matrix[nx][ny] == 0:
+                    temp_lab_matrix[nx][ny] = 2
+                    virus.append([nx, ny])
+
+    for i in range(N):
+        for j in range(M):
+            if temp_lab_matrix[i][j] == 0:
+                result += 1
+
+    max_result = max(max_result, result)
 
 
-build_wall(0, 0)
-print(max_value)
+def make_walls(count):
+    if count == 3:
+        bfs()
+        return
+
+    for i in range(N):
+        for j in range(M):
+            if lab_matrix[i][j] == 0:
+                lab_matrix[i][j] = 1
+                make_walls(count+1)
+                lab_matrix[i][j] = 0
+
+
+make_walls(0)
+
+print(max_result)
