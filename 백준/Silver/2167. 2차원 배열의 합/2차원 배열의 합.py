@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
-temp_list = [list(map(int, input().split())) for _ in range(N)]
+temp_list = [list(map(int, input().strip().split())) for _ in range(N)]
 dp = [[0] * (M+1) for _ in range(N+1)]
 
 K = int(input())
