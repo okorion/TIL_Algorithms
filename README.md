@@ -20,7 +20,7 @@ sys.stdin = open("input.txt", 'r')
 
 input = sys.stdin.readline
 
-N = int(input())
+N = int(input())    # input().strip() <-- 백준문제 풀이 시 테스트케이스 다 맞는데 틀렸다고 나오면 strip() 먼저 시도하기
 ```
 
 #### input과 sys.stdin.readline의 차이점
