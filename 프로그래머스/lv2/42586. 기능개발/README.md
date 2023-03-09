@@ -69,3 +69,139 @@
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+
+
+<br/>
+<br/>
+
+### 풀이
+
+ 
+1) queue FIFO 을 활용한 풀이 (통과)
+```
+def solution(progresses, speeds):
+
+    answer = []
+    time = 0
+    count = 0
+    
+    while len(progresses)> 0:
+        if (progresses[0] + time*speeds[0]) >= 100: 
+            progresses.pop(0)
+            speeds.pop(0)
+            count += 1
+            
+        else:
+            if count > 0:
+                answer.append(count)
+                count = 0
+            time += 1
+    answer.append(count)
+    return answer
+```
+
+progresses = [93,30,55]
+
+speeds = [1,30,5]  
+
+ 
+
+1) count, time 변수를 설정해둔다. 
+
+2) 첫번째가 100이 될때까지 loop 를 돌며 time 을 늘린다. 
+
+    else --> time+=1
+
+3) (time =7) 이 되면  첫번째 값이(93) 100이 되어 if에 따라 pop 되고 count +=1
+
+4) 현재 time 이 7이기 때문에 두번째 값(30)도 if에 따라 pop 되고 count +=1 
+
+5) 세번째 값은 100이 안되기 때문에 loop를 돌며 time 을 늘리는데 
+
+    2) 번과 달리 그전에 완성된 친구들 count 값이 있기 때문에 이 친구들을 출시해줘야함 
+
+        따라서 answer 리스트에 append하고 count 초기화!!! 
+
+    그후에 loop를 돌며 time 을 늘리는데 
+
+6) 세번째 값(55)이 100을 넘으면 count +=1 하고 
+
+    이 count 를 다시한번 answer 리스트에 append 해줌으로써 마지막 제품까지 출시 ! 
+
+ 
+
+ 
+
+ 
+
+2) 소요 시간을 미리 계산해두기 math.ceil 을 활용해서 
+ 
+```
+import math
+
+
+def solution(progresses, speeds):
+    progresses = [math.ceil((100 - a) / b) for a, b in zip(progresses, speeds)]
+    answer = []
+    front = 0, 0
+
+    for idx in range(len(progresses)):
+        if progresses[idx] > progresses[front]:  
+            answer.append(idx - front)
+            front = idx 
+    answer.append(len(progresses) - front)  
+
+    return answer
+ ```
+
+ 
+
+1) math.ceil 을 활용해서 소요시간을 각각 구한다. 
+
+math.ceil 은 소수점 올림  +)math.floor 내림, round는 반올림 
+
+주어진 조건에서 계산하면 progresses = [7,3,9]
+
+ 
+
+ 
+
+2)  progresses 의 각 소요시간을 확인하는데 이때 front 에 가장 오래걸린 소요 시간의 인덱스를 저장해둔다. 
+
+우선 초기값으론 0인덱스 
+
+ 
+
+3) idx = 0 : 첫번째 수(7) 보다 첫번째 수 (7) 는 같기 때문에 pass ==> front = 0
+
+4) idx = 1 : 첫번째 수(7) 보다 두번째 수(3) 는 작기 때문에 pass ==> front = 0
+
+5) idx = 2 : 첫번째 수(7) 보다 세번째 수(9) 는 크기 때문에 
+
+         - 현재 인덱스부터 프론트인덱스의 차를 구하고 이를 answer에 append (그 전까지 친구들은 동시 출시니까)
+
+         - 프론트인덱스를 현재인덱스로 업데이트! ==> front = 2
+
+---- 반복문 완료 ---
+
+6) 맨 마지막에 현재 프론트인덱스와 전체 길이의 차를 구해서 남은 친구들 다 출시 
+
+ 
+
+ 
+### 정리
+1) 모든 풀이 과정을 다 리스트에 담아두는 방식으로 접근하지 x --> 원하는대로 구현이 안되기 쉽상. 
+
+ 
+
+2) 입출력 순서에 대한 언급이 있다면, stack , queue 이라 간파하고 pop 으로 풀려고 해보기 
+
+ 
+
+stack 의 경우에는 별도의 리스트 만들고 (stack_list)
+
+반복하며 stack_list.pop() 으로 접근하면 쉽게 풀림 ex) () {} 문제들. 
+
+queue 의 경우는 pop(0)
+
+참고링크: https://huidea.tistory.com/15
