@@ -71,3 +71,23 @@
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+
+
+```
+from string import ascii_lowercase
+
+def solution(s, skip, index):
+    result = ''
+
+    a_to_z = set(ascii_lowercase)   #이런 방법이 있군.
+    a_to_z -= set(skip)
+    a_to_z = sorted(a_to_z)
+    l = len(a_to_z)
+
+    dic_alpha = {alpha:idx for idx, alpha in enumerate(a_to_z)}
+
+    for i in s:
+        result += a_to_z[(dic_alpha[i] + index) % l]
+
+    return result
+```
