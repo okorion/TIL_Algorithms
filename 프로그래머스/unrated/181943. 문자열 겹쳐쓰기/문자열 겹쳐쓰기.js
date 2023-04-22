@@ -13,10 +13,7 @@ function solution(my_string, overwrite_string, s) {
         for (let i = my_string.length - tmp; i < my_string.length; i++) {
             answer += my_string[i]
         }
-    }
-    
-    
-    
+    }    
     
     return answer;
 }
