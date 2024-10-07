@@ -1,11 +1,7 @@
 # TIL_Algorithms
 
 ## ⚙ Study RULE!
-- Python으로!
-- 백준!
-- 그리디, 탐색(완전탐색/BFS/DFS), 기초 동적 프로그래밍 50문제씩!
-- 이후 그래프 이론, 중급/고급 동적 프로그래밍, 문자열 순서로!
-- 문제 당 30분 제한 => 많이 접하기
+- JavaScript로!
 
 <br>
 </details> 
